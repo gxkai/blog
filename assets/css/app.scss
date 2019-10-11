@@ -1,15 +1,17 @@
-@import "~prism-themes/themes/prism-atom-dark.css";
-@import "~github-markdown-css/github-markdown.css";
-@import "~normalize.css/normalize.css";
+@charset "UTF-8";
+
+@import "prism-themes/themes/prism-atom-dark.css";
+@import "github-markdown-css/github-markdown.css";
+@import "normalize.css/normalize.css";
 
 $mdi-font-path: '~@mdi/font/fonts';
-@import "~@mdi/font/scss/materialdesignicons";
+//@import "~@mdi/font/scss/materialdesignicons"; // TODO:
 
 html,
 body {
   margin: 0;
   padding: 0;
-  background-image: url(../image/bg.jpg);
+  //background-image: url("../image/bg.jpg"); // TODO
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -271,4 +273,13 @@ $languages: (
 // IMPORTANT: 覆盖 tailwindcss container
 .container {
   width: auto !important;
+}
+
+.nav {
+  height: 45px;
+  background-color: rgba(40, 40, 40, 0.75);
+}
+
+.footer {
+  padding: 50px 0 20px;
 }

@@ -1,47 +1,28 @@
 module.exports = {
-  root: true,
   env: {
     browser: true,
+    es6: true,
     node: true
   },
-  parserOptions: {
-    parser: '@typescript-eslint/parser'
-  },
   extends: [
-    '@nuxtjs',
-    'plugin:prettier/recommended',
-    'prettier',
-    'prettier/vue'
+    'standard'
   ],
-  plugins: [
-    '@typescript-eslint',
-    'prettier'
-  ],
-  // add your custom rules here
-  rules: {
-    'no-console': 'off',
-    'vue/no-v-html': 'off',
-    'vue/require-default-prop': 'off',
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly'
   },
-  overrides: [
-    {
-      files: ['**/*.ts', '**/*.tsx'],
-      rules: {
-        'import/export': 'off',
-        'no-unused-vars': 'off',
-        '@typescript-eslint/prefer-namespace-keyword': 'error',
-        '@typescript-eslint/adjacent-overload-signatures': 'error',
-        '@typescript-eslint/member-delimiter-style': ['error', {
-          multiline: {
-            delimiter: 'none'
-          },
-          singleline: {
-            delimiter: 'comma'
-          }
-        }],
-        '@typescript-eslint/member-ordering': 'off',
-        '@typescript-eslint/type-annotation-spacing': 'error',
-      }
-    }
-  ]
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    },
+    ecmaVersion: 2018,
+    sourceType: 'module'
+  },
+  plugins: [
+    'react',
+    '@typescript-eslint'
+  ],
+  rules: {
+  }
 }
