@@ -11,7 +11,7 @@
     "generate": "nuxt-ts generate",
     "lint": "eslint --ext .ts,.js,.vue --ignore-path .eslintignore .",
     "test": "jest",
-    "generate-post-list": "ts-node --project scripts/tsconfig.json scripts/generate-post-list.ts",
+    "generate-post-list": "ts-node --project scripts/tsconfig.json scripts/generate-post-list.ts generate",
     "new": "ts-node --project scripts/tsconfig.json scripts/create-post.ts new"
   },
   "husky": {
